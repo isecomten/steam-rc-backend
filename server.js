@@ -4,7 +4,9 @@ const port = process.env.port || 5000;
 const axios = require('axios');
 const cors = require('cors');
 const retrieveData = require('./retrieveData.js');
-retrieveData.ProcessInsertGames();
+
+//retrieveData.ProcessInsertGames();
+retrieveData.ProcessInsertGameDetails(1734);
 
 app.use(cors());
 
