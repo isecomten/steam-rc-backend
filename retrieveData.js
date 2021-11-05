@@ -15,7 +15,12 @@ const retrieveData = {
         }
     },
     ProcessInsertGameDetails: async function () {
-
+        try {
+            const apps = await GetAppsFromDB();
+        }
+        catch (err) {
+            console.log(err);
+        }
     },
     ProcessInsertGameReviews: async function () {
 
@@ -44,5 +49,14 @@ async function InsertAppsIntoDB(apps) {
         }
     }
 }
-
+async function GetAppsFromDB() {
+    const query = 'SELECT * FROM games ORDER BY appid';
+    try {
+        const results = await pool.query(query);
+        return results;
+    }
+    catch (err) {
+        throw (err);
+    }
+}
 module.exports = retrieveData;
