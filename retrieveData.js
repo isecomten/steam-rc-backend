@@ -25,7 +25,7 @@ const retrieveData = {
 async function GetAppsFromSteam() {
     try {
         const apps = await axios.get('http://api.steampowered.com/ISteamApps/GetAppList/v0002/?format=json');
-        return apps;
+        return apps.data.applist.apps;
     }
     catch (err) {
         throw (err);

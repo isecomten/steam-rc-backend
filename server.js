@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.port || 5000;
 const axios = require('axios');
 const cors = require('cors');
+const retrieveData = require('./retrieveData.js');
+retrieveData.ProcessInsertGames();
+
 app.use(cors());
 
 app.listen(port, err => {

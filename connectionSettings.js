@@ -1,4 +1,5 @@
 const connectionSettings = {
+    user: 'postgres',
     host: 'localhost',
     database: 'steam-revenue-calculator',
     password: 'Sgwo052sadv!',
