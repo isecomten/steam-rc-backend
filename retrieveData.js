@@ -25,7 +25,7 @@ const retrieveData = {
             try {
                 let appDetails = await GetAppDetailsFromSteam(app);
                 //response might be successful but app doesn't exist
-                if (appDetails?.success == false) {
+                if (appDetails?.success == false || appDetails?.data == null) {
                     counter++;
                     continue;
                 }

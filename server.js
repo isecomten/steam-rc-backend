@@ -6,8 +6,8 @@ const cors = require('cors');
 const retrieveData = require('./retrieveData.js');
 
 //retrieveData.ProcessInsertGames();
-//retrieveData.ProcessInsertGameDetails(5100);
-retrieveData.ProcessInsertGameReviews(0);
+//retrieveData.ProcessInsertGameDetails(107056);
+//retrieveData.ProcessInsertGameReviews(54796);
 app.use(cors());
 
 app.listen(port, err => {
